@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100%;
+    min-height: 100vh;
+    background-color:rgb(3, 3, 99);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .todo-app {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    margin:10px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+
+.container .todo-app .title{
+    text-align: center;
+}
+
+
+.container .todo-app .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    border-radius:30px;
+    background: rgb(208, 201, 201);
+    margin-top: 20px;
+}
+
+
+.container .todo-app .row .inputBx{
+    border-style: none;
+    outline: none;
+    background: transparent;
+    padding:10px;
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+    width: 100%;
+    
+}
+
+
+.container .todo-app .row .inputBtn{
+    border-style: none;
+    outline: none;
+    background: #ff9305;
+    padding: 16px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.container .todo-app .row ::placeholder {
+    color: #8e8c8c;
+    font-size: 16px;
+}
+
+
+.list-container{
+    margin-top: 30px;
+    margin-left: 40px;
+    
+}
+
+.list-container ul li {
+    padding: 12px 8px 12px 30px;
+    list-style: none;
+    font-size:18px;
+    position: relative;
+}
+
+.list-container ul li::before{
+    content: " ";
+    position: absolute;
+    background-image: url("images/unchecked.png");
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top:8px;
+    left:-10px;
+
+}
+
+
+
+.list-container ul li.checked{
+    color:gray;
+    text-decoration: line-through;
+}
+
+
+.list-container ul li.checked::before{
+
+    background-image: url("images/checked.png");
+}
+
+
+.list-container ul li span {
+    position: absolute;
+    right:0px;
+    width: 20px;
+    height: 20px;
+    font-size: 40px;
+    line-height: 20px;
+    text-align: center;
+
+}
+
+.list-container ul li span:hover{
+    background: #8e8c8c;
+}
